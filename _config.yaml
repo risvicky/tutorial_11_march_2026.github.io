@@ -1,0 +1,22 @@
+title: Introduction to Molecular Dynamics Simulations 
+description: >-
+  A tutorial on the introduction of molecular dynamics simulations with GROMACS
+baseurl: "/tutorial_11_march_2026.github.io"
+domain: "tutorial_11_march_2026.github.io"
+url: "https://risvicky.github.io"
+
+remote_theme: sighingnow/jekyll-gitbook
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-readme-index
+  - jekyll-remote-theme
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
