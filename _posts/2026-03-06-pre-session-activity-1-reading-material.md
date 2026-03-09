@@ -1,4 +1,4 @@
-# Pre-session activity 1: Reading
+# Introduction to Molecular Dynamics Simulations
 
 ---
 title: "Introduction to Molecular Dynamics Simulations"
