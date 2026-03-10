@@ -30,7 +30,7 @@ Criteria:
 
 | Mark| Command lines to perform the simulation |
 | ----------- | ----------- |
-| 90–100% | Exceptional command lines are completely provided for step-by-step instructions to perform the simulation. It contains all of the necessary commands to perform the MD simulation|
+| 90–100% | Exceptional command lines are completely provided for step-by-step instructions to perform the simulation. It contains all of the necessary commands to perform the MD simulation. |
 |80–89% | Outstanding command lines. Very well-structured command lines are provided to perform the MD simulation.  |
 | 70–79%| Excellent command lines are provided for step-by-step instructions, but are missing a command line.  |
 | 60–69%| Comprehensive command lines are provided for step-by-step instructions, and missing more than one command line. |
@@ -45,6 +45,7 @@ Use of References
 10% weighting
 Criteria:
 • References are incorporated appropriately throughout the step-by-step instructions through the use of in-text citation.
+
 | Mark| Command lines to perform the simulation |
 | ----------- | ----------- |
 | 90–100% | Exceptional use of references which could not be improved upon for this level of
