@@ -1,5 +1,3 @@
-# Pre-session activity 3: Check your understanding
-
 You have read the materials related to the MD simulations.
 
 If you need to set a new MD simulation from scratch, 
