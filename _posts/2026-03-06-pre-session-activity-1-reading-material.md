@@ -11,7 +11,7 @@ The main goal of computer-aided methods in chemistry and material design is to o
 - Ability to simulate conditions that are difficult to achieve experimentally
 
 #### Energy and Forces
-When we perform a simulation of a chemical system, we are interested in the **energy** and **forces** acting on the atoms. The energy of a system is a function of the positions of all atoms in the system.[1](https://levich.ccny.cuny.edu/koplik/molecular_simulation/AT2.pdf)
+When we perform a simulation of a chemical system, we are interested in the **energy** and **forces** acting on the atoms. The energy of a system is a function of the positions of all atoms in the system.[1](https://levich.ccny.cuny.edu/koplik/molecular_simulation/AT2.pdf).
 
 The forces acting on each atom are related to the energy by the following equation:
 
