@@ -19,7 +19,7 @@ Feedback and comment will be returned 2 days after the submission.
 
 This series of questions will help you set up your simulation.
 
-1. Choose any type of cation and anion that you want to simulate!
+1. Choose any type of salt (consisting of cation/cations and anion/anions) that you want to simulate!
     - In the previous tutorial, Tutorial 1, you have learnt to draw an ion or molecule, you can use that knowledge to build your system.
 
 2. You will solvate your system in water molecules. How would you proceed to do that?

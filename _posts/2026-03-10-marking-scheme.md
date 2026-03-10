@@ -8,6 +8,7 @@ The marking of this tutorial consists of two aspects:
 
 ### Step-by-step instructions
 45% weighting
+
 Criteria:
 • Step-by-step instructions contain the key points of the workflow on how to set up molecular dynamics simulations and answer the provided guided questions
 
@@ -25,6 +26,7 @@ Criteria:
 
 ### Command in line
 45% weighting
+
 Criteria:
 • Command lines should be provided for step-by-step instructions to perform the MD simulation.
 
@@ -41,8 +43,8 @@ Criteria:
 | 0% | Command lines are missing. |
 
 ### Use of References
-Use of References
 10% weighting
+
 Criteria:
 • References are incorporated appropriately throughout the step-by-step instructions through the use of in-text citation.
 
