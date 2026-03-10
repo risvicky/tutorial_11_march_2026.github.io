@@ -82,9 +82,9 @@ In MD simulation, time step ($\Delta t$)
 To improve the efficiency of atomistic MD simulations, it is essential to implement a larger time step $\Delta t$.
 However, $\Delta t$ is limited by the fastest motion in the system that is generally associated with the vibrational modes of the lightest atoms in the system, typically hydrogen.
 
-Constraint dynamic approach~\autocite{ryckaert} has been developed to overcome the time step limitation by constraining the degrees of freedom \textit{e.g.},~bond length of X$\bm{-}$H bonds (with X = C, N, O).
+Constraint dynamic approach has been developed to overcome the time step limitation by constraining the degrees of freedom e.g. bond length of `X-H` bonds (with X = C, N, O).
 This approach uses Lagrangian multipliers to depict the magnitudes of forces directed along the bonds, ensuring the bond length remains constant.
-The SHAKE/RATTLE algorithm can be implemented by applying the bond constraints on high vibrational covalent bond lengths (\textit{e.g.},~C$\bm{-}$H, C$\bm{-}$C)~\autocite{forester} to their average bond length, allowing the use of larger time steps up to 2 fs in the simulation.
+The SHAKE/RATTLE algorithm can be implemented by applying the bond constraints on high vibrational covalent bond lengths e.g., `C-H`, `C-C` to their average bond length, allowing the use of larger time steps up to 2 fs in the simulation.
 The computational time can be reduced by a factor of 5-10 if constrained MD algorithms are applied.
 
 #### Periodic Boundary Conditions (PBC)
@@ -144,11 +144,6 @@ The simulation protocol should consider this sequence:
 2. Generating initial velocities: random according to a Maxwell-Boltxmann distribution at a chosen temperature.
 3. Equilibration Phase
 4. Production phase
-
-
-#### Additional  Reading Material
-Molecular Mechanics
-Force Fields and Parametrisation
 
 **References**
 
