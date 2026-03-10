@@ -50,20 +50,14 @@ Criteria:
 
 | Mark| Command lines to perform the simulation |
 | ----------- | ----------- |
-| 90–100% | Exceptional use of references which could not be improved upon for this level of
-study.|
-|80–89% | Outstanding use of references that are extensive, up to date and consistent
-throughout the article with no errors in formatting.  |
+| 90–100% | Exceptional use of references which could not be improved upon for this level of study.|
+|80–89% | Outstanding use of references that are extensive, up to date and consistent throughout the article with no errors in formatting.  |
 | 70–79%| Excellent use of references throughout the article, with correct format used.  |
-| 60–69%| Comprehensive use of references throughout the article, minimal errors in reference
-formatting. |
+| 60–69%| Comprehensive use of references throughout the article, minimal errors in reference formatting. |
 |50–59% | Satisfactory use of references throughout the article, small errors in formatting. |
-| 40–49% | Unsatisfactory use of references. Errors in referencing format and a lack of
-primary sources  |
-| 30–39%| Inadequate use of references. Minimal use of references throughout the article
-and multiple errors in reference formatting. |
-| 20–29% | Weak attempt at meeting the given referencing criteria. Poor, inconsistent/
-incorrect use of references throughout the article.  |
+| 40–49% | Unsatisfactory use of references. Errors in referencing format and a lack of primary sources  |
+| 30–39%| Inadequate use of references. Minimal use of references throughout the article and multiple errors in reference formatting. |
+| 20–29% | Weak attempt at meeting the given referencing criteria. Poor, inconsistent incorrect use of references throughout the article.  |
 | Below 20% | Partially or entirely missing references. |
 
 
