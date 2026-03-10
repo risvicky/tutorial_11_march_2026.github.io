@@ -1,12 +1,5 @@
 # Introduction to Molecular Dynamics Simulations
 
----
-title: "Introduction to Molecular Dynamics Simulations"
-date: 2025-10-06
-author: "Risnita Vicky Listyarini"
-
----
-
 ### Chemical Simulations 
 
 ##### Why work with computer-aided methods?
