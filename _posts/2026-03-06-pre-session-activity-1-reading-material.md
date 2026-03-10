@@ -4,6 +4,7 @@
 title: "Introduction to Molecular Dynamics Simulations"
 date: 2025-10-06
 author: "Risnita Vicky Listyarini"
+
 ---
 
 ### Chemical Simulations 
@@ -68,13 +69,30 @@ where $$  r $$ is the distance between two atoms, $$  \epsilon $$ is the depth o
 
 ##### Molecular Dynamics (MD) Simulations
 Description of the time evolution of chemical systems by propagation the Newton's equations of motion. 
-<p align="center">
-  <img src="{{ '/figure/loop.png' | relative_url }}" alt="MD simulation workflow" width="600">
-</p>
+How to simulate the dynamics?
+The taylor series expansion for *a* = *t* and *x* = *t* + $\Delta t$ is
 
 <p align="center">
-  <img src="{{ '/figure/integration.png' | relative_url }}" alt="Integration of Newton's equations of motion" width="300">
+  <img src="{{ '/figure/taylor.png' | relative_url }}" alt="Taylor series 1" width="600">
 </p>
+The big *O* is asymptotic notation that represents the order of approximation. Since velocity is the change in position over time and acceleration is the change in velocity over time, the above expression can be substituted with
+<p align="center">
+  <img src="{{ '/figure/taylor_2.png' | relative_url }}" alt="Taylor series 1" width="600">
+</p>
+
+#### Integrating Equation of Motion
+
+
+
+#### Choosing a timestep
+In MD simulation, time step ($\Delta t$) 
+To improve the efficiency of atomistic MD simulations, it is essential to implement a larger time step $\Delta t$.
+However, $\Delta t$ is limited by the fastest motion in the system that is generally associated with the vibrational modes of the lightest atoms in the system, typically hydrogen.
+
+Constraint dynamic approach~\autocite{ryckaert} has been developed to overcome the time step limitation by constraining the degrees of freedom \textit{e.g.},~bond length of X$\bm{-}$H bonds (with X = C, N, O).
+This approach uses Lagrangian multipliers to depict the magnitudes of forces directed along the bonds, ensuring the bond length remains constant.
+The SHAKE/RATTLE algorithm can be implemented by applying the bond constraints on high vibrational covalent bond lengths (\textit{e.g.},~C$\bm{-}$H, C$\bm{-}$C)~\autocite{forester} to their average bond length, allowing the use of larger time steps up to 2 fs in the simulation.
+The computational time can be reduced by a factor of 5-10 if constrained MD algorithms are applied.
 
 #### Periodic Boundary Conditions (PBC)
 In MD simulation, systems are treated as if they were surrounded by their identical copies in all directions.
@@ -117,6 +135,27 @@ The RDF depicted in the figure above represents the probablity to find a solvent
 </p>
 
 The figure above shows RDFs of O-O, O-H, and H-H pairs in pure water.[[3]](https://pubs.acs.org/doi/full/10.1021/acs.jctc.4c00162)
+
+##### Molecular Dynamics (MD) Simulations: Simulation Protocol
+MD simulations follows this workflow.
+<p align="center">
+  <img src="{{ '/figure/loop.png' | relative_url }}" alt="MD simulation workflow" width="600">
+</p>
+
+<p align="center">
+  <img src="{{ '/figure/integration.png' | relative_url }}" alt="Integration of Newton's equations of motion" width="300">
+</p>
+
+The simulation protocol should consider this sequence:
+1. Generating initial structure: chemically meaningful structure (no overlapping atoms, correct distances)
+2. Generating initial velocities: random according to a Maxwell-Boltxmann distribution at a chosen temperature.
+3. Equilibration Phase
+4. Production phase
+
+
+#### Additional  Reading Material
+Molecular Mechanics
+Force Fields and Parametrisation
 
 **References**
 
