@@ -1,5 +1,3 @@
-# Pre-session activity 3: Setting up a Molecular Dynamics Simulation
-
 You have read the material on basic molecular dynamics.
 You will perform a molecular dynamics simulation using open-source software GROMACS to study the ionic solution.
 
