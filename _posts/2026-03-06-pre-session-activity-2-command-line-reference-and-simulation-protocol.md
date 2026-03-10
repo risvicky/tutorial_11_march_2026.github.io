@@ -1,5 +1,3 @@
-# Pre-session activity 3: Command in line Reference and Simulation Protocol
-
 ## Command in line Reference
 In this tutorial, you will perform a molecular dynamics (MD) simulation using open-source software GROMACS.
 GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids. It was originally developed in the Biophysical Chemistry department of University of Groningen. 
