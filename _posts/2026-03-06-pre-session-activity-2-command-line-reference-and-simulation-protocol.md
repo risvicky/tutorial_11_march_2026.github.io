@@ -1,0 +1,139 @@
+# Pre-session activity 3: Command in line Reference and Simulation Protocol
+
+## Command in line Reference
+In this tutorial, you will perform a molecular dynamics (MD) simulation using open-source software GROMACS.
+GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids. It was originally developed in the Biophysical Chemistry department of University of Groningen. 
+The GROMACS project originally began in 1991 at Department of Biophysical Chemistry, University of Groningen, Netherlands (1991–2000). Its name originally derived from this time (GROningen MAchine for Chemical Simulations).
+Since 2001, GROMACS is developed by the GROMACS development teams at the Royal Institute of Technology and Uppsala University, Sweden.[[1]](https://en.wikipedia.org/wiki/GROMACS).
+
+GROMACS provides many tools to prepare, running and analysing MD simulation. 
+These are all structured as part of a single gmx wrapper binary, and invoked with commands like **gmx grompp**. or **gmx mdrun**. Documentation for these can be found at the respective sections below, as well as on man pages (e.g., gmx-grompp(1)) and with `gmx help` command or `gmx command` -h.
+
+If you have installed an MPI version of GROMACS, by default the **gmx** binary is called **gmx_mpi** and you should adapt accordingly.
+
+You should familiarise yourself with GROMACS commands to run a MD simulation.
+Each command has a different purpose, and the command by name could be accessed in the GROMACS page [[here]](https://manual.gromacs.org/current/user-guide/cmdline.html).
+
+## Getting Started with GROMACS
+In this part, assuming that you have been familiar with basic knowledge of [Linux command line](https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal) and Unix including the use of text editor such as `vi`.
+
+## Setting up your environment
+Make sure you can run GROMACS commands in your terminal. Load GROMACS by typing the following command in your terminal.
+If you are working in ARCHIE-WeSt, you need to load GROMACS module.
+   ```bash
+   module load gromacs/intel-2022.2/2022.1-single
+    gmx --version
+    gmx
+   ```
+   If this result appears,
+   ```bash
+    gmx
+    -bash: gmx: command not found
+   ```
+   depending to the access node that your account has, you need to load the executable GROMACS in your terminal.
+
+   If you are working on your local desktop computer, you also need to load the GROMACS executable in your terminal using one of these commands.
+   ```bash
+    source /usr/local/gromacs/bin/gmx
+    source /usr/local/gromacs/bin/GMXRC
+    gmx
+   ```
+  Try loading one of the commands that works in your terminal. 
+
+  If the command `gmx` works, it will produce this result:
+```
+                         :-) GROMACS - gmx, 2025.3 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/vicky/documents/
+Command line:
+  gmx
+
+SYNOPSIS
+
+gmx [-[no]h] [-[no]quiet] [-[no]version] [-[no]copyright] [-nice <int>]
+    [-[no]backup]
+
+OPTIONS
+
+Other options:
+
+ -[no]h                     (no)
+           Print help and quit
+ -[no]quiet                 (no)
+           Do not print common startup info or quotes
+ -[no]version               (no)
+           Print extended version information and quit
+ -[no]copyright             (no)
+           Print copyright information on startup
+ -nice   <int>              (19)
+           Set the nicelevel (default depends on command)
+ -[no]backup                (yes)
+           Write backups if output files exist
+
+Additional help is available on the following topics:
+    commands    List of available commands
+    selections  Selection syntax and usage
+To access the help, use 'gmx help <topic>'.
+For help on a command, use 'gmx help <command>'.
+
+GROMACS reminds you: "I don’t think we’re afraid of inline assembly." (Szilard Pall)
+```
+
+To get more information about GROMACS installation and user guide, please visit [GROMACS website](https://manual.gromacs.org/current/install-guide/index.html).[2]
+
+
+## Flow Chart
+
+A typical simulation workflow with GROMACS is illustrated [here](https://manual.gromacs.org/current/user-guide/flow.html)[3]
+<p align="center">
+  <img src="{{ '/figure/workflow.png' | relative_url }}" alt="MD simulation workflow" width="600">
+</p>
+You need to generate a topology file of your system. For example, if your system contains a protein then you need to solvate the protein in a box of water. 
+Several steps of energy minimization may be necessary, these consist of cycles: [gmx grompp](https://manual.gromacs.org/current/onlinehelp/gmx-grompp.html#gmx-grompp) -> [gmx mdrun](https://manual.gromacs.org/current/onlinehelp/gmx-mdrun.html#gmx-mdrun)
+
+## Important files
+Here is an overview of the most important GROMACS file types that you will encounter.
+The expalanation of each file is taken from GROMACS [page](https://manual.gromacs.org/current/user-guide/getting-started.html)
+
+### Molecular Topology file (`.top`)
+The molecular topology file is generated by the program [gmx pdb2gmx](https://manual.gromacs.org/current/onlinehelp/gmx-pdb2gmx.html#gmx-pdb2gmx). [gmx pdb2gmx](https://manual.gromacs.org/current/onlinehelp/gmx-pdb2gmx.html#gmx-pdb2gmx) translates a [pdb](https://manual.gromacs.org/current/reference-manual/file-formats.html#pdb) structure file of any peptide or protein to a molecular topology file. This topology file contains a complete description of all the interactions in your peptide or protein.
+
+### Topology #include file mechanism
+When constructing a system topology in a top file for presentation to grompp, GROMACS uses a built-in version of the so-called C preprocessor, cpp (in GROMACS 3, it really was cpp). cpp interprets lines like:
+```
+#include "ions.itp"
+```
+by looking for the indicated file in the current directory, the GROMACS share/top directory as indicated by the GMXLIB environment variable, and any directory indicated by a `-I` flag in the value of the include `run parameter` in the mdp file.
+You could read more explanation in this [page](https://manual.gromacs.org/current/user-guide/getting-started.html).
+
+### Molecular Structure file (`.gro`, `.pdb`)
+When `gmx pdb2gmx` is executed to generate a molecular topology, it also translates the structure file (pdb file) to a GROMOS structure file ([gro](https://manual.gromacs.org/current/reference-manual/file-formats.html#gro) file). The main difference between a pdb file and a gromos file is their format and that a [gro](https://manual.gromacs.org/current/reference-manual/file-formats.html#gro) file can also hold velocities. However, if you do not need the velocities, you can also use a pdb file in all programs. To generate a box of solvent molecules around the peptide, the program [gmx solvate](https://manual.gromacs.org/current/onlinehelp/gmx-solvate.html#gmx-solvate) is used. First the program [gmx editconf](https://manual.gromacs.org/current/onlinehelp/gmx-editconf.html#gmx-editconf) should be used to define a box of appropriate size around the molecule. [gmx solvate](https://manual.gromacs.org/current/onlinehelp/gmx-solvate.html#gmx-solvate) solvates a solute molecule (the peptide) into any solvent (in this case, water). The output of [gmx solvate](https://manual.gromacs.org/current/onlinehelp/gmx-solvate.html#gmx-solvate) is a gromos structure file of the peptide solvated in water. [gmx solvate](https://manual.gromacs.org/current/onlinehelp/gmx-solvate.html#gmx-solvate) also changes the molecular topology file (generated by [gmx pdb2gmx](https://manual.gromacs.org/current/onlinehelp/gmx-pdb2gmx.html#gmx-pdb2gmx)) to add solvent to the topology.
+
+### Molecular Dynamics parameter file (`.mdp`)
+The Molecular Dynamics Parameter ([mdp](https://manual.gromacs.org/current/reference-manual/file-formats.html#mdp)) file contains all information about the Molecular Dynamics simulation itself e.g. time-step, number of steps, temperature, pressure etc. The easiest way of handling such a file is by adapting a [sample mdp file](https://manual.gromacs.org/current/reference-manual/file-formats.html#mdp).
+
+### Index file (`.ndx`)
+Sometimes you may need an index file to specify actions on groups of atoms (e.g. temperature coupling, accelerations, freezing). Usually the default index groups will be sufficient, so for this demo we will not consider the use of index files.
+
+### Run input file (`.tpr`)
+The next step is to combine the molecular structure ([gro](https://manual.gromacs.org/current/reference-manual/file-formats.html#gro) file), topology ([top](https://manual.gromacs.org/current/reference-manual/file-formats.html#top) file) MD-parameters ([mdp](https://manual.gromacs.org/current/reference-manual/file-formats.html#mdp) file) and (optionally) the index file ([ndx](https://manual.gromacs.org/current/reference-manual/file-formats.html#ndx)) to generate a run input file ([tpr](https://manual.gromacs.org/current/reference-manual/file-formats.html#tpr) extension). This file contains all information needed to start a simulation with GROMACS. The gmx grompp program processes all input files and generates the run input [tpr](https://manual.gromacs.org/current/reference-manual/file-formats.html#tpr) file.
+
+
+### Trajectory file (`.trr`, `.tng`, or `.xtc`)
+Once the run input file is available, we can start the simulation. The program which starts the simulation is called [gmx mdrun](https://manual.gromacs.org/current/onlinehelp/gmx-mdrun.html#gmx-mdrun). The only input file of [gmx mdrun](https://manual.gromacs.org/current/onlinehelp/gmx-mdrun.html#gmx-mdrun) that you usually need in order to start a run is the run input file ([tpr](https://manual.gromacs.org/current/reference-manual/file-formats.html#tpr) file). The typical output files of [gmx mdrun](https://manual.gromacs.org/current/onlinehelp/gmx-mdrun.html#gmx-mdrun) are the trajectory file ([trr](https://manual.gromacs.org/current/reference-manual/file-formats.html#trr) file), a logfile ([log](https://manual.gromacs.org/current/reference-manual/file-formats.html#log) file), and perhaps a checkpoint file ([cpt](https://manual.gromacs.org/current/reference-manual/file-formats.html#cpt) file).
+
+## System Preparation
+There are many ways to prepare a simulation system to run with GROMACS. These often vary with the kind of scientific question being considered, or the model physics involved. A protein-ligand atomistic free-energy simulation might need a multi-state topology, while a coarse-grained simulation might need to manage defaults that suit systems with higher density..
+The explanation can be read in this [page](https://manual.gromacs.org/current/user-guide/system-preparation.html)
+
+## Frequently Asked Question
+GROMACS has a nice page related to Answers to frequently asked questions (FAQs). You can check it in this [page](https://manual.gromacs.org/2024.0/user-guide/faq.html)
+
+**References**
+
+1. https://en.wikipedia.org/wiki/GROMACS
+2. https://manual.gromacs.org/current/install-guide/index.html
+3. https://manual.gromacs.org/current/user-guide/flow.html
+4. 

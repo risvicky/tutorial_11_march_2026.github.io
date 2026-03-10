@@ -4,7 +4,7 @@ This tutorial page is for Tutorial 2: Molecular Dynamics and VMD as a part of mo
 ## Prerequisites
 - Basic knowledge of [Linux command line](https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal)
 - GROMACS installed on your machine or access to ARCHIE-WeSt HPC
-- Visualization software (e.g., VMD, PyMOL) installed or access to visualization tools on ARCHIE-WeSt
+- Visualisation software (e.g., VMD, PyMOL) installed or access to visualization tools on ARCHIE-WeSt
 - Basic understanding of molecular dynamics concepts
 
 ## Learning Objectives

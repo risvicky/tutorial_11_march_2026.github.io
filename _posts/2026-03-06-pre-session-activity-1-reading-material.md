@@ -79,7 +79,7 @@ The big *O* is asymptotic notation that represents the order of approximation. S
 <p align="center">
   <img src="{{ '/figure/taylor_2.png' | relative_url }}" alt="Taylor series 1" width="600">
 </p>
-
+Numerical evaluation of Taylor expansion 
 #### Integrating Equation of Motion
 
 
