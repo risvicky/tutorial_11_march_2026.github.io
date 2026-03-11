@@ -22,6 +22,7 @@ This series of questions will help you set up your simulation.
 
 1. Choose any type of salt (consisting of cation/cations and anion/anions) that you want to simulate!
     - In the previous tutorial, Tutorial 1, you have learnt to draw an ion or molecule, you can use that knowledge to build your system.
+    - Always check the total charge of your system!
 
 2. You will solvate your system in water molecules. How would you proceed to do that?
     - For the same condition, let's use a cubic box of 3.5 nm in each direction (x, y, z).
@@ -33,14 +34,19 @@ This series of questions will help you set up your simulation.
 4. Now that you have all the information about your system, how would you bring your system into a more favourable state so that the forces between them are reasonable?
 
 5. How do you check that your system has now reached a more favourable state?
-    - You should use VMD in part and consider other approaches as well.
+    - You should use VMD in part, but also consider other approaches.
+    - Which part of the output file should you look at in relation to this?
 
 6. You need to run the simulation until the stationary state (equilibrium) is reached (energy redistribution). How would you proceed to do that?
-    - In the reading material, we have talked about different thermodynamic ensembles. 
+    - In the reading material, we discussed different thermodynamic ensembles. 
+    - Consider all the parameters you would need at this stage.
 
 7. Now, you need to continue the simulation over a desired timescale and collect measurements. How would you proceed to do this?
+    - For this condition, let's use a simulation time of 100 ps and standard conditions for temperature and pressure. 
 
 8. How would you analyse the trajectory output files you get from the simulations?
+    - What sort of information can you extract from the trajectory output files, and how would you proceed to analyse them?
+    - Consider about any information that might help you answer the questions in the post-session activity.
 
 ### References
 References are incorporated appropriately throughout the step-by-step instructions through the use of in-text citation.

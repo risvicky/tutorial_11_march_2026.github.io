@@ -117,6 +117,8 @@ The simplest RDF criterion is based on the cutoff or distance criterion.[[3]](ht
 
 It provides information about the structure of liquids and amorphous solids by describing how particle density varies as a function of distance from a reference particle. 
 
+RDF analysis can be used to study interactions between atoms or molecules in solution. 
+
 <p align="center">
   <img src="{{ '/figure/GC.png' | relative_url }}" alt="RDF" width="auto">
 </p>
