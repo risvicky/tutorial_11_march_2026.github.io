@@ -142,8 +142,8 @@ MD simulations follows this workflow.
 The simulation protocol should consider this sequence:
 1. Generating initial structure: chemically meaningful structure (no overlapping atoms, correct distances)
 2. Generating initial velocities: random according to a Maxwell-Boltxmann distribution at a chosen temperature.
-3. Equilibration Phase
-4. Production phase
+3. Equilibration Phase: run the simulation until a stationary state (equilibrium) is reached (energy redistribution)
+4. Production phase: continue to run the simulation at a desired condition (e.g. temperature, pressure) and collecting data for analysis.
 
 **References**
 

@@ -12,7 +12,7 @@ The marking of this tutorial consists of two aspects:
 Criteria:
 • Step-by-step instructions contain the key points of the workflow on how to set up molecular dynamics simulations and answer the guided questions
 
-| Mark| Step-by-step instructions |
+| Mark| Step-by-step instructions meet the following description |
 | ----------- | ----------- |
 | 90–100% | Exceptional step-by-step instructions that could not be improved upon for this level of study. It contains all the answers to the guided questions.|
 |80–89% | Outstanding step-by-step instructions. Very well structured step-by-step instructions, and answered all the key points of the guided questions. |
@@ -31,7 +31,7 @@ Criteria:
 Criteria:
 • Command lines should be provided for step-by-step instructions to perform the MD simulation.
 
-| Mark| Command lines to perform the simulation |
+| Mark| Command lines to perform the simulation meet the following description |
 | ----------- | ----------- |
 | 90–100% | Exceptional command lines are completely provided for step-by-step instructions to perform the simulation. It contains all of the necessary commands to perform the MD simulation. |
 |80–89% | Outstanding command lines. Very well-structured command lines are provided to perform the MD simulation.  |
@@ -87,8 +87,9 @@ Criteria:
 45% weighting
 
 • Correct short answers to the questions given at the end of this page
-• Critical analysis of methods including potential limitations with an appreciation of
-strengths/weaknesses and errors/limits in the data
+
+• Critical analysis of methods including potential limitations with an appreciation of strengths/weaknesses and errors/limits in the data
+
 • Results discussed and evaluated in the context of published literature where appropriate
 
 
