@@ -14,7 +14,13 @@ You may use gen AI to help your understanding, and for troubleshooting. You **ma
 4. Choose a pair of atoms and analyse their interactions!
 5. Choose a second pair of atoms and analyse the interactions. Compare this interaction to the one in number 4, specifically noting similarities and differences. Provide comments on how these interactions relate to or contrast with one another.
 
-Each answer should be no longer than two paragraphs in length. You may use bullet points or numerical lists. The overall maximum word count is 1500. Include in-text references to support your claims and provide a full bibliography at the end of your assignment.
+Each answer should be no longer than two paragraphs in length. 
+
+You may use bullet points or numerical lists. 
+
+The overall maximum word count is 1500. 
+
+Include in-text references to support your claims and provide a full bibliography at the end of your assignment.
 
 
 

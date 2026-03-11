@@ -1,6 +1,6 @@
 You have read the materials related to the MD simulations.
 
-If you need to set a new MD simulation from scratch, 
+If you need to set a new MD simulation from scratch, you should be able to answer these questions.
 
 1. How would you explain the step-by-step setting up and running of an MD simulation?
 

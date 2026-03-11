@@ -54,4 +54,5 @@ Failure to do so will result in points being deducted.
 
 ## Question Forum 
 If you have any questions related to this activity, you can write your question on this whiteboard [here](https://padlet.com/risnitalistyarini/question-forum-4v2mzxuc9q03mgyc)
+
 <div class="padlet-embed" style="width:720px;height:480px; border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;max-width:100%;"><p style="padding:0;margin:0;width:100%;height:100%"><iframe src="https://padlet.com/embed/4v2mzxuc9q03mgyc" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write;clipboard-read" style="width:100%;height:100%;display:block;padding:0;margin:0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></p></div>
