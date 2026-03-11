@@ -4,7 +4,7 @@ The marking of this tutorial consists of two aspects:
 1.	Pre-session activity in the form of step-by-step instructions designed by students (50%)
 2.	Post-session activity in the form of files, including input and output files, a PDF file with short answers to the questions (50%)
 
-## Marking scheme: Pre-session activity
+## Marking scheme: Pre-session activity (50%)
 
 ### Step-by-step instructions
 45% weighting
@@ -61,4 +61,4 @@ Criteria:
 | Below 20% | Partially or entirely missing references. |
 
 
-## Marking scheme: Post-session activity
+## Marking scheme: Post-session activity (50%)
