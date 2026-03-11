@@ -13,6 +13,7 @@ We could model this phenomenon with an MD simulation.
 ## What you should do
 
 Discuss with your group how you would set up your MD simulation, and write your step-by-step instructions for setting up the simulation using this [template]({{ '/file/template_setting_up_simulation.doc' | relative_url }}) (right click to download and save it).
+The step-by-step instructions should be accompanied by the corresponding command line for executing them in GROMACS.
 
 Rename the file by this format: group_name_setting_up_simulation.doc and submit it a week before the Tutorial 2 is conducted.
 Feedback and comment will be returned 2 days after the submission. 
